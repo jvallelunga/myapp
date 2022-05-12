@@ -12,7 +12,7 @@ router.post('/', async function(req, res, next) {
 });
 router.get('/', async function(req, res, next) {
   try {
-    res.json(UserService.find());
+    res.json(await UserService.find());
   } catch (err) {
     next(err);
   }  
